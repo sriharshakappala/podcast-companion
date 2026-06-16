@@ -69,3 +69,11 @@ export const highlights = pgTable("highlights", {
   timestampEnd: integer("timestamp_end"),
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });
+
+export const briefings = pgTable("briefings", {
+  id: uuid("id").defaultRandom().primaryKey(),
+  userId: uuid("user_id").references(() => users.id).notNull(),
+  episodeIds: jsonb("episode_ids").$type<string[]>().notNull(),
+  generatedAt: timestamp("generated_at").defaultNow().notNull(),
+  seen: integer("seen").default(0).notNull(),
+});

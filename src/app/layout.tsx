@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Podcast Companion",
-  description: "AI-powered podcast discovery and episode qualification",
+  description: "Know in 15 seconds if an episode is worth your 45 minutes",
 };
 
 export default function RootLayout({
@@ -29,7 +29,7 @@ export default function RootLayout({
         lang="en"
         className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
       >
-        <body className="min-h-full flex flex-col bg-gray-950 text-gray-100">
+        <body className="min-h-full flex flex-col">
           {children}
         </body>
       </html>

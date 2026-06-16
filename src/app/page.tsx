@@ -6,7 +6,7 @@ export default async function Home() {
   const { userId } = await auth();
 
   if (userId) {
-    redirect("/episodes");
+    redirect("/home");
   }
 
   return (
